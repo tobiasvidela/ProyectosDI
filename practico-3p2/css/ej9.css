@@ -1,0 +1,37 @@
+:root {
+  --azul: #3090e2;
+  --blanco: #fff;
+}
+
+body {
+  background-color: var(--azul);
+  margin: 0;
+  height: 100vh; /* Altura total de la ventana */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+.form_panel {
+  background-color: var(--blanco);
+  display: flex;
+  flex-direction: column; /* Alinea los elementos verticalmente */
+  justify-content: center;
+  align-items: center; /* Centra los elementos dentro del panel */
+  width: 80%; /* Ocupa el 80% del ancho de la ventana */
+  max-width: 350px; /* Máximo ancho del panel */
+  min-width: 300px; /* Mínimo ancho del panel */
+  padding: 40px; /* Ajusta el padding para que sea más grande */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  max-height: 50vh; /* Máxima altura ocupada por el panel */
+}
+
+/*MODIFICAR*/
+/* Ajustes generales para los elementos del panel */
+.form_panel input,
+.form_panel button {
+  width: 100%; /* Los inputs y botones ocuparán el 100% del ancho del panel */
+  margin: 10px 0; /* Espacio vertical entre los elementos */
+  padding: 5px; /* Espaciado interno */
+  font-size: 14px; /* Fuente más grande */
+}
