@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tipos de INPUT</title>
+</head>
+<body>
+
+  <h1>Encuesta de Productos Deportivos</h1>
+
+  <form action="tratar_form.php" method="GET" enctype="multipart/form-data">
+
+    <!-- Apellido y Nombre -->
+    <label for="nombre_completo">Apellido y Nombre:</label><br>
+    <input type="text" id="nombre_completo" name="nombre_completo" required><br><br>
+
+    <!-- Correo electrónico -->
+    <label for="email">Correo electrónico:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <!-- Desea recibir información por email -->
+    <label>¿Desea recibir información por email?</label><br>
+    <input type="radio" id="informacion_si" name="recibir_info" value="si" required>
+    <label for="informacion_si">Sí</label><br>
+    <input type="radio" id="informacion_no" name="recibir_info" value="no" required>
+    <label for="informacion_no">No</label><br><br>
+
+    <!-- Deportes de interés -->
+    <label for="deportes">Deportes de interés (seleccione más de uno):</label><br>
+    <input type="checkbox" id="futbol" name="deportes[]" value="futbol">
+    <label for="futbol">Fútbol</label><br>
+    <input type="checkbox" id="basket" name="deportes[]" value="basket">
+    <label for="basket">Baloncesto</label><br>
+    <input type="checkbox" id="tenis" name="deportes[]" value="tenis">
+    <label for="tenis">Tenis</label><br>
+    <input type="checkbox" id="natacion" name="deportes[]" value="natacion">
+    <label for="natacion">Natación</label><br>
+    <input type="checkbox" id="ciclismo" name="deportes[]" value="ciclismo">
+    <label for="ciclismo">Ciclismo</label><br><br>
+
+
+    <!-- Calificación del sitio -->
+    <label for="calificacion_sitio">¿Cuánto le gusta nuestro sitio?</label><br>
+    <input type="range" id="calificacion_sitio" name="calificacion_sitio" min="0" max="10" step="1" oninput="this.nextElementSibling.value = this.value">
+    <output>5</output> <!-- Muestra el valor seleccionado por el slider -->
+    <p>0: no le gusta nada, 10: le gusta mucho</p><br><br>
+
+    <!-- Color preferido -->
+    <label for="color_preferido">Color preferido para las prendas deportivas:</label><br>
+    <input type="color" id="color_preferido" name="color_preferido" required><br><br>
+
+    <!-- Fecha actual -->
+    <label for="fecha">Fecha del día:</label><br>
+    <input type="date" id="fecha" name="fecha" required><br><br>
+
+    <!-- Número de teléfono -->
+    <label for="telefono">Número de teléfono:</label><br>
+    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" required><br><br>
+
+    <!-- Horario de contacto -->
+    <label for="hora_desde">Hora desde la que se puede contactar:</label><br>
+    <input type="time" id="hora_desde" name="hora_desde" required><br><br>
+
+    <label for="hora_hasta">Hora hasta la que se puede contactar:</label><br>
+    <input type="time" id="hora_hasta" name="hora_hasta" required><br><br>
+
+    <!-- Subir archivo -->
+    <label for="archivo">Subir modelo de prenda que le gusta:</label><br>
+    <input type="file" id="archivo" name="archivo" accept=".jpg,.jpeg,.png,.gif"><br><br>
+
+    <!-- Botón para enviar -->
+    <input type="submit" value="Enviar Encuesta">
+
+  </form>
+
+</body>
+</html>

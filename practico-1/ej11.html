@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enviar Poema</title>
+</head>
+<body>
+  <h1>Envía tu Poema</h1>
+  <form action="http://poemas.com/recepcion.php" method="POST">
+    <!-- Seudónimo del Autor -->
+    <label for="seudonimo">Seudónimo del Autor:</label><br>
+    <input type="text" id="seudonimo" name="seudonimo" required><br><br>
+
+    <!-- Texto del Poema -->
+    <label for="poema">Escribe tu Poema:</label><br>
+    <textarea id="poema" name="poema" rows="10" cols="50" required></textarea><br><br>
+
+    <!-- Botón de Envío -->
+    <input type="submit" value="Enviar Poema">
+  </form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SELECT</title>
+</head>
+<body>
+  <h1>Formulario de Registro</h1>
+  <form action="registro.php" method="POST">
+    <!-- Apellido y Nombre -->
+    <label for="nombre">Apellido y Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+    
+    <!-- DNI -->
+    <label for="dni">DNI:</label><br>
+    <input type="number" id="dni" name="dni" required><br><br>
+    
+    <!-- País de Origen -->
+    <label for="pais">País de Origen:</label><br>
+    <select id="pais" name="pais" required>
+      <option value="albania">Albania</option>
+      <option value="alemania">Alemania</option>
+      <option value="afganistan">Afganistán</option>
+      <option value="argentina" selected>Argentina</option>
+      <option value="brasil">Brasil</option>
+      <option value="bolivia">Bolivia</option>
+      <option value="chile">Chile</option>
+      <option value="paraguay">Paraguay</option>
+      <option value="uruguay">Uruguay</option>
+    </select><br><br>
+
+    <!-- Botón de envío -->
+    <input type="submit" value="Registrarse">
+  </form>
+</body>
+</html>

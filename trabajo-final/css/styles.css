@@ -1,0 +1,275 @@
+:root {
+  --verde: #4caf50;
+  --rojo: #F44336;
+  --blanco: #FFFFFF;
+  --fuente-base: 'Arial', sans-serif;
+}
+
+/* GENERAL */
+body {
+  font-family: var(--fuente-base);
+  margin: 0;
+  padding: 0;
+  background-color: var(--blanco);
+}
+
+/* HEADER */
+header img {
+  width: 60px;
+  height: 60px;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+header h1 {
+  display: inline;
+  font-size: 36px;
+  vertical-align: middle;
+}
+
+header p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: var(--rojo);
+}
+
+/* MENÚ DE NAVEGACIÓN */
+nav {
+  background-color: var(--verde);
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--blanco);
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: var(--rojo);
+  color: var(--blanco);
+}
+
+/* SECCIÓN INICIO */
+#inicio {
+  background-color: var(--blanco);
+  color: var(--verde);
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#inicio h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--rojo);
+}
+
+#inicio p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+/* SECCIÓN CURIOSIDADES DEL CUBING */
+#curiosidades {
+  background-color: var(--verde);
+  color: var(--blanco);
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#curiosidades h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--rojo);
+}
+
+#curiosidades p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+/* SECCIÓN TIPOS DE ROMPECABEZAS 3D */
+#rompecabezas {
+  background-color: var(--blanco);
+  color: var(--verde);
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#rompecabezas h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--rojo);
+}
+
+#rompecabezas p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+#rompecabezas ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+#rompecabezas li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#rompecabezas li strong {
+  color: var(--rojo);
+}
+
+/* SECCIÓN MÉTODOS DE RESOLUCIÓN */
+#metodos {
+  background-color: var(--blanco);
+  color: var(--verde);
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#metodos h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--rojo);
+}
+
+#metodos p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+#metodos ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+#metodos li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#metodos li strong {
+  color: var(--rojo);
+}
+
+/* SECCIÓN TIMER ONLINE */
+#timer {
+  background-color: var(--blanco);
+  color: var(--verde);
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#timer h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--rojo);
+}
+
+#timer p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+#timer a {
+  color: var(--verde);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#timer a:hover {
+  text-decoration: underline;
+}
+
+/* SECCIÓN CONTACTO */
+#contacto {
+  background-color: var(--blanco);
+  color: var(--verde);
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contacto h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--rojo);
+}
+
+#contacto p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+#contacto a {
+  color: var(--verde);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contacto a:hover {
+  text-decoration: underline;
+}
+
+/* PIE DE PÁGINA */
+footer {
+  background-color: var(--verde);
+  color: var(--blanco);
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 2px solid var(--rojo);
+}
+
+footer p {
+  margin: 0;
+  font-size: 16px;
+}
