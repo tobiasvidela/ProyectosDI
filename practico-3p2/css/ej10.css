@@ -1,0 +1,18 @@
+body img {
+  width: 400px;
+  margin: 10px;
+  border: solid 2px black;
+}
+
+.agua {
+  border: solid 2px blue;
+}
+
+.arbol {
+  border: solid 2px green;
+}
+
+body img:hover {
+  width: 440px;
+  height: 440px;
+}
