@@ -1,0 +1,75 @@
+:root {
+  --azul: #3050ee;
+  --celeste: #3090ee;
+  --violeta: #9030ee;
+  --naranja: #ee9030;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap; /* Para hacer que las tarjetas se ajusten en varias filas */
+  justify-content: center;
+  gap: 20px; /* Espacio entre tarjetas */
+  max-width: 1200px; /* Máximo ancho del contenedor */
+  padding: 20px;
+}
+
+.tarjeta {
+  background-color: var(--celeste);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 30px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+  cursor: pointer;
+  background-color: var(--azul);
+}
+
+.tarjeta:last-of-type {
+  background-color: var(--violeta);
+}
+
+.tarjeta:last-of-type:hover {
+  cursor: pointer;
+  background-color: var(--naranja);
+}
+
+.tarjeta * {
+  margin: auto;
+}
+
+.tarjeta i {
+  font-size: 56px;
+  color: #fff;
+}
+
+.nombre {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.subtitulo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
