@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 :root {
   --azul: #3090e2;
   --blanco: #fff;
+}
+
+*{
+  /* border: solid 1px red; */
+  font-family: "Merriweather", serif;
+  font-weight: 300;
 }
 
 body {
@@ -11,27 +18,65 @@ body {
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
 }
+
 .form_panel {
   background-color: var(--blanco);
   display: flex;
   flex-direction: column; /* Alinea los elementos verticalmente */
   justify-content: center;
   align-items: center; /* Centra los elementos dentro del panel */
-  width: 80%; /* Ocupa el 80% del ancho de la ventana */
-  max-width: 350px; /* Máximo ancho del panel */
-  min-width: 300px; /* Mínimo ancho del panel */
-  padding: 40px; /* Ajusta el padding para que sea más grande */
+  width: 80%;
+  max-width: 420px; /* Máximo ancho del panel */
+  min-width: 360px; /* Mínimo ancho del panel */
+  padding: 20px; /* Ajusta el padding para que sea más grande */
   border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
-  max-height: 50vh; /* Máxima altura ocupada por el panel */
+  max-height: 360px; /* Máxima altura ocupada por el panel */
 }
 
-/*MODIFICAR*/
-/* Ajustes generales para los elementos del panel */
-.form_panel input,
+.logo {
+  width: 5em;
+  height: 5em;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.form_panel * {
+  margin: 0.4em 0;
+}
+
+.form_panel input {
+  width: 96%;
+  padding: 1em 0.5em;
+  border-radius: 3px;
+  border-style: solid;
+  background-color: #f5fff5;
+}
+
 .form_panel button {
-  width: 100%; /* Los inputs y botones ocuparán el 100% del ancho del panel */
-  margin: 10px 0; /* Espacio vertical entre los elementos */
-  padding: 5px; /* Espaciado interno */
-  font-size: 14px; /* Fuente más grande */
+  width: 100%;
+  padding: 0.5em 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--blanco);
+  background-color: var(--azul);
+  border-radius: 8px;
+  border-style: none;
+}
+.form_panel button:hover {
+  color: var(--azul);
+  background-color: var(--blanco);
+  cursor: pointer;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form_panel a {
+  text-decoration: none;
+  font-size: 14px;
+  margin: 0.2em 0;
+}
+.form_panel a:first-of-type {
+  margin-top: 0.7em;
 }
