@@ -14,6 +14,10 @@ body {
 }
 
 /* HEADER */
+header {
+  display: none;
+}
+
 header img {
   width: 60px;
   height: 60px;
@@ -263,7 +267,7 @@ footer {
   color: var(--blanco);
   padding: 10px;
   text-align: center;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   width: 100%;
   border-top: 2px solid var(--rojo);
