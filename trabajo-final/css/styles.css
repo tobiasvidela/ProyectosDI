@@ -1,45 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
-  --verde: #4caf50;
-  --rojo: #F44336;
-  --blanco: #FFFFFF;
-  --fuente-base: 'Arial', sans-serif;
+  --Negro: #000000;
+  --Blanco: #FFFFFF;
+  --Amarillo: #F7F700;
+  --Rojo: #D52B1E;
+  --Naranja: #FF7700;
+  --Verde: #1FB464;
+  --Azul: #0083CA;
+  --Poppins: 'Poppins', sans-serif;
 }
+
+/* * {
+  border: solid 1px red;
+} */
 
 /* GENERAL */
 body {
-  font-family: var(--fuente-base);
+  font-family: var(--Poppins);
   margin: 0;
   padding: 0;
-  background-color: var(--blanco);
+  background-color: var(--Blanco);
 }
 
 /* HEADER */
 header {
-  display: none;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  height: 100vh;
+  padding: 1em 5em;
 }
 
 header img {
-  width: 60px;
-  height: 60px;
-  vertical-align: middle;
-  margin-right: 15px;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  width: 200px;
+  height: 200px;
 }
 
 header h1 {
-  display: inline;
-  font-size: 36px;
-  vertical-align: middle;
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  font-size: 72px;
 }
 
 header p {
+  grid-row: 2 / 3;
+  grid-column: 1 / 3;
   font-size: 18px;
-  margin-top: 10px;
-  color: var(--rojo);
+  color: var(--Rojo);
+  align-self: start;
+  margin-top: 0;
 }
 
 /* MENÚ DE NAVEGACIÓN */
 nav {
-  background-color: var(--verde);
+  background-color: var(--Verde);
   padding: 10px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -58,7 +78,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: var(--blanco);
+  color: var(--Blanco);
   font-size: 18px;
   font-weight: bold;
   padding: 10px 15px;
@@ -69,14 +89,23 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a:focus {
-  background-color: var(--rojo);
-  color: var(--blanco);
+  background-color: var(--Rojo);
+  color: var(--Blanco);
 }
 
 /* SECCIÓN INICIO */
+#seccion-inicio {
+  background-image: url("../img/seccion-inicio.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 50px;
+  margin: auto;
+  min-height: 100vh;
+}
+
 #inicio {
-  background-color: var(--blanco);
-  color: var(--verde);
+  background-color: var(--Blanco);
+  color: var(--Verde);
   padding: 40px;
   margin: 20px auto;
   max-width: 800px;
@@ -88,7 +117,7 @@ nav ul li a:focus {
 #inicio h2 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: var(--rojo);
+  color: var(--Rojo);
 }
 
 #inicio p {
@@ -98,11 +127,20 @@ nav ul li a:focus {
 }
 
 /* SECCIÓN CURIOSIDADES DEL CUBING */
+#seccion-curiosidades {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas: una para las curiosidades, otra para la imagen */
+  gap: 50px; /* Espacio entre las columnas */
+  padding: 0 50px;
+  margin: 100px auto;
+  min-height: 100vh;
+  align-items: center; /* Alinea verticalmente el contenido en el centro */
+}
+
 #curiosidades {
-  background-color: var(--verde);
-  color: var(--blanco);
+  background-color: var(--Verde);
+  color: var(--Blanco);
   padding: 40px;
-  margin: 20px auto;
   max-width: 800px;
   text-align: center;
   border-radius: 10px;
@@ -112,7 +150,7 @@ nav ul li a:focus {
 #curiosidades h2 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: var(--rojo);
+  color: var(--Rojo);
 }
 
 #curiosidades p {
@@ -121,21 +159,48 @@ nav ul li a:focus {
   margin: 10px 0;
 }
 
-/* SECCIÓN TIPOS DE ROMPECABEZAS 3D */
-#rompecabezas {
-  background-color: var(--blanco);
-  color: var(--verde);
+#record-mundial {
+  background-color: var(--Blanco);
   padding: 40px;
-  margin: 20px auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#record-mundial img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#record-mundial h2 {
+  font-size: 24px;
+  color: var(--Verde);
+  margin-top: 20px;
+}
+
+/* SECCIÓN TIPOS DE ROMPECABEZAS 3D */
+#seccion-rompecabezas {
+  padding: 50px;
+  margin: 100px auto;
+  min-height: 100vh;
+}
+
+#rompecabezas {
+  background-color: var(--Rojo);
+  color: var(--Blanco);
+  padding: 40px;
+  margin: 0 auto 50px auto;
   max-width: 800px;
   border-radius: 10px;
+  text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #rompecabezas h2 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: var(--rojo);
 }
 
 #rompecabezas p {
@@ -144,24 +209,52 @@ nav ul li a:focus {
   margin-bottom: 20px;
 }
 
-#rompecabezas ul {
-  list-style-type: disc;
-  padding-left: 20px;
+/* Tarjetas de los tipos de rompecabezas */
+#tarjetas-rompecabezas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-#rompecabezas li {
-  font-size: 18px;
+.tarjeta {
+  background-color: var(--Blanco);
+  color: var(--Negro);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+  font-size: 20px;
   margin-bottom: 10px;
+  color: var(--Rojo);
 }
 
-#rompecabezas li strong {
-  color: var(--rojo);
+.tarjeta p {
+  font-size: 16px;
+  line-height: 1.4;
 }
 
 /* SECCIÓN MÉTODOS DE RESOLUCIÓN */
 #metodos {
-  background-color: var(--blanco);
-  color: var(--verde);
+  background-color: var(--Blanco);
+  color: var(--Verde);
   padding: 40px;
   margin: 20px auto;
   max-width: 800px;
@@ -172,7 +265,7 @@ nav ul li a:focus {
 #metodos h2 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: var(--rojo);
+  color: var(--Rojo);
 }
 
 #metodos p {
@@ -192,13 +285,13 @@ nav ul li a:focus {
 }
 
 #metodos li strong {
-  color: var(--rojo);
+  color: var(--Rojo);
 }
 
 /* SECCIÓN TIMER ONLINE */
 #timer {
-  background-color: var(--blanco);
-  color: var(--verde);
+  background-color: var(--Blanco);
+  color: var(--Verde);
   padding: 40px;
   margin: 20px auto;
   max-width: 800px;
@@ -209,7 +302,7 @@ nav ul li a:focus {
 #timer h2 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: var(--rojo);
+  color: var(--Rojo);
 }
 
 #timer p {
@@ -219,7 +312,7 @@ nav ul li a:focus {
 }
 
 #timer a {
-  color: var(--verde);
+  color: var(--Verde);
   text-decoration: none;
   font-weight: bold;
 }
@@ -230,8 +323,8 @@ nav ul li a:focus {
 
 /* SECCIÓN CONTACTO */
 #contacto {
-  background-color: var(--blanco);
-  color: var(--verde);
+  background-color: var(--Blanco);
+  color: var(--Verde);
   padding: 40px;
   margin: 20px auto;
   max-width: 800px;
@@ -242,7 +335,7 @@ nav ul li a:focus {
 #contacto h2 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: var(--rojo);
+  color: var(--Rojo);
 }
 
 #contacto p {
@@ -252,7 +345,7 @@ nav ul li a:focus {
 }
 
 #contacto a {
-  color: var(--verde);
+  color: var(--Verde);
   text-decoration: none;
   font-weight: bold;
 }
@@ -263,17 +356,68 @@ nav ul li a:focus {
 
 /* PIE DE PÁGINA */
 footer {
-  background-color: var(--verde);
-  color: var(--blanco);
-  padding: 10px;
+  background-color: var(--Verde);
+  color: var(--Blanco);
+  padding: 5px;
   text-align: center;
-  /* position: fixed; */
   bottom: 0;
-  width: 100%;
-  border-top: 2px solid var(--rojo);
+  width: inherit;
+  border-top: 2px solid var(--Rojo);
 }
 
 footer p {
   margin: 0;
   font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 999px) {
+  #seccion-curiosidades {
+    grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
+  }
 }
