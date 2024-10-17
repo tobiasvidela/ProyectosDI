@@ -1,4 +1,7 @@
+/* Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Afacad Flux */
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
 
 :root {
   --Negro: #000000;
@@ -9,6 +12,7 @@
   --Verde: #1FB464;
   --Azul: #0083CA;
   --Poppins: 'Poppins', sans-serif;
+  --Afacad_Flux: "Afacad Flux", sans-serif;
 }
 
 /* * {
@@ -46,6 +50,7 @@ header h1 {
   grid-row: 1 / 2;
   grid-column: 2 / 3;
   font-size: 72px;
+  font-family: var(--Afacad_Flux);
 }
 
 header p {
@@ -55,6 +60,7 @@ header p {
   color: var(--Rojo);
   align-self: start;
   margin-top: 0;
+  /* font-family: var(--Afacad_Flux); */
 }
 
 /* MENÚ DE NAVEGACIÓN */
@@ -74,6 +80,10 @@ nav ul {
 
 nav ul li {
   margin: 0 15px;
+}
+
+nav ul li i {
+  margin: 0 5px;
 }
 
 nav ul li a {
