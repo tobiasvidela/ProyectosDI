@@ -375,9 +375,6 @@ nav ul li a:focus {
   font-weight: 700; /* Más negrita para destacar */
 }
 
-#timer img {
-}
-
 #timer p {
   font-size: 18px;
   line-height: 1.8; /* Mayor espaciado entre líneas para mejorar la legibilidad */
@@ -521,7 +518,7 @@ footer {
   text-align: center;
   bottom: 0;
   width: inherit;
-  border-top: 2px solid var(--Negro);
+  /* border-top: 2px solid var(--Negro); */
 }
 
 footer p {
