@@ -17,11 +17,11 @@
     <ul>
       <li><a href="#seccion-home" active><i class="fa-solid fa-house"></i></a></li>
       <li><a href="#seccion-inicio">Inicio</a></li>
-      <li><a href="#seccion-curiosidades"><i class="fa-regular fa-lightbulb"></i> Curiosidades</a></li>
-      <li><a href="#seccion-rompecabezas"><i class="fa-solid fa-list"></i> Tipos</a></li>
-      <li><a href="#seccion-metodos"><i class="fa-brands fa-leanpub"></i> Aprender a Resolver</a></li>
+      <li><a href="#seccion-curiosidades"><i class="fa-solid fa-lightbulb"></i> Curiosidades</a></li>
+      <li><a href="#seccion-rompecabezas"><i class="fa-solid fa-layer-group"></i> Tipos</a></li>
+      <li><a href="#seccion-metodos"><i class="fa-solid fa-graduation-cap"></i> Aprender a Resolver</a></li>
       <li><a href="#seccion-timer"><i class="fa-solid fa-stopwatch"></i> Timer Online</a></li>
-      <li><a href="#seccion-contacto"><i class="fa-solid fa-paper-plane"></i> Contacto</a></li>
+      <li><a href="#seccion-contacto"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
     </ul>
   </nav>
 
@@ -123,33 +123,85 @@
 
 
   <!-- Sección Métodos de Resolución -->
-  <section id="metodos">
-    <h2>Métodos de Resolución</h2>
-    <p>Existen diversos métodos para resolver el Cubo de Rubik. Aquí te mostramos los más utilizados:</p>
-    <ul>
-      <li><strong>Método de Principiantes:</strong> Un método paso a paso ideal para quienes recién comienzan.</li>
-      <li><strong>Método CFOP (Fridrich):</strong> El método más popular entre los speedcubers. Divide la resolución en cuatro pasos: Cruz, F2L, OLL y PLL.</li>
-      <li><strong>Método Roux:</strong> Un método que se enfoca en la construcción de bloques y es muy eficiente.</li>
-      <li><strong>Método ZZ:</strong> Un método alternativo con menos movimientos y orientaciones.</li>
-    </ul>
+  <section id="seccion-metodos">
+    <div id="metodos">
+      <h2>Métodos de Resolución</h2>
+      <p>Los métodos de resolución son técnicas utilizadas para resolver el Cubo de Rubik. Existen varios enfoques, cada uno con sus propias ventajas. Por ejemplo, resolverlo capa por capa, o resolverlo por bloques. Algunos de lo métodos más utilizados son:</p>
+      <div class="grid-container">
+        <div class="tarjeta">
+          <iframe width="853" height="480" src="https://www.youtube.com/embed/GyY0OxDk5lI" title="Resolver cubo de Rubik 3x3 (Principiantes) | Rápido y Fácil | EL MEJOR TUTORIAL | Español" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <h3>Método de Principiantes</h3>
+          <p>Un método paso a paso ideal para quienes recién comienzan.</p>
+          <button class="btn">Aprender Más</button>
+        </div>
+        <div class="tarjeta">
+          <iframe width="853" height="480" src="https://www.youtube.com/embed/d_hR8pn67wA" title="Resolver cubo de Rubik 3x3 (FRIDRICH COMPLETO) | HD | Tutorial | Español" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <h3>Método CFOP (Fridrich)</h3>
+          <p>El método más popular entre los speedcubers, dividido en cuatro pasos.</p>
+          <button class="btn">Aprender Más</button>
+        </div>
+        <div class="tarjeta">
+          <iframe width="853" height="480" src="https://www.youtube.com/embed/U8RvqWXLDV0" title="Método Roux | El Rival de Fridrich 🔥" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <h3>Método Roux</h3>
+          <p>Se enfoca en la construcción de bloques y es muy eficiente.</p>
+          <button class="btn">Aprender Más</button>
+        </div>
+      </div>
+    </div>
   </section>
+
 
   <!-- Sección Timer Online -->
-  <section id="timer">
-    <h2>Timer Online</h2>
-    <p>¿Listo para poner a prueba tu velocidad? Utiliza nuestro <a href="https://cstimer.net/" target="_blank">timer online</a> para cronometrar tus resoluciones y seguir mejorando.</p>
-  </section>
+<section id="seccion-timer">
+  <div id="timer">
+    <h2>¡Pon a prueba tu velocidad!</h2>
+    <p>
+      Usa nuestro <a href="https://cstimer.net/" target="_blank">timer online</a> 
+      para medir tus tiempos y mejorar tus habilidades de resolución.
+    </p>
+    <a href="https://cstimer.net/" target="_blank" class="btn">Ir al Timer <i class="fa-solid fa-stopwatch"></i></a>
+  </div>
+</section>
+
 
   <!-- Sección Contacto -->
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>¿Tienes alguna duda o quieres unirte a la comunidad? Contáctanos para recibir más información.</p>
-    <p>Email: <a href="mailto:speedcubevm@gmail.com">speedcubevm@gmail.com</a></p>
+  <section id="seccion-contacto">
+    <div id="contacto">
+      <h2>Contacto</h2>
+      <p>¿Tienes alguna duda o quieres unirte a la comunidad? Completa el siguiente formulario para ponerte en contacto con nosotros.</p>
+
+      <form id="form-contacto" action="#" method="post">
+        <!-- Campo para el Nombre -->
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+
+        <!-- Campo para el Email -->
+        <div class="form-group">
+          <label for="email">Correo Electrónico</label>
+          <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+        </div>
+
+        <!-- Campo para el Mensaje -->
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        </div>
+
+        <!-- Botón de Envío -->
+        <button type="submit" class="btn"><i class="fa-solid fa-envelope"></i> Enviar Mensaje</button>
+      </form>
+    </div>
   </section>
+
 
   <!-- Pie de página -->
   <footer>
     <p>&copy; 2024 SpeedCube VM. Todos los derechos reservados.</p>
   </footer>
+  
+  <!-- VOLVER -->
+  <a id="volver" href="#seccion-home"><i class="fa-solid fa-house"></i></a>
 </body>
 </html>
