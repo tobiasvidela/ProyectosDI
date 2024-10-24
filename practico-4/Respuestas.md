@@ -207,3 +207,53 @@ Con el arreglo generado en el ejercicio anterior:
   console.log(`Números menores al promedio: ${menores}`);
   console.log(`Números iguales al promedio: ${ar_random.length - mayores - menores}`);
 ```
+
+## Ejercicio 9
+Investigar como es la sintaxis y la forma de uso de las funciones ``alert``, ``prompt`` y
+``confirm`` en javascript. Hacer una ejemplo con cada una.
+
+### Características principales de cada función:
+- **alert(mensaje)**
+  - Muestra una ventana modal con un mensaje
+  - Solo tiene botón "Aceptar"
+  - Detiene la ejecución del código hasta que el usuario presione "Aceptar"
+  - No retorna ningún valor
+  - Ejemplo:
+    ``` javascript
+      const nombre = 'Tobías';
+      const edad = 22;
+      alert(`Hola ${nombre}, tienes ${edad} años.`);
+    ```
+- **prompt(mensaje, \[valorPorDefecto\])**
+  - Muestra una ventana modal con un campo de texto
+  - Tiene botones "Aceptar" y "Cancelar"
+  - El segundo parámetro es opcional y define un valor por defecto
+  - Retorna:
+    - El texto ingresado si el usuario presiona "Aceptar"
+    - ``null`` si el usuario presiona "Cancelar"
+    - String vacío ("") si el usuario no ingresa nada y presiona "Aceptar"
+  - Ejemplo:
+    ``` javascript
+      const nombre = prompt('Ingrese su nombre:');
+      const edad = prompt('Ingrese su edad:');
+    ```
+- **confirm(mensaje)**
+  - Muestra una ventana modal con un mensaje y botones de confirmación
+  - Tiene botones "Aceptar" y "Cancelar"
+  - Retorna:
+    - ``true`` si el usuario presiona "Aceptar"
+    - ``false`` si el usuario presiona "Cancelar"
+  - Ejemplo:
+    ``` javascript
+      const respuesta = confirm('¿Desea continuar?');
+    ```
+
+> 
+> Estas funciones son bloqueantes (detienen la ejecución del código)
+> 
+> Son métodos antiguos pero aún útiles para prototipos rápidos
+> 
+> Para aplicaciones profesionales se suelen usar alternativas más modernas y personalizables
+> 
+> El estilo visual depende del navegador
+> 
