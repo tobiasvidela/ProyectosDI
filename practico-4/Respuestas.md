@@ -302,3 +302,38 @@ Hacer una función que reciba una cadena y retorne la misma pero con los caracte
 
 > *Solución en ``ej12.js``*
 
+## Ejercicio 13
+Hacer una función que reciba una cadena y devuelva la cantidad de vocales que tiene.
+Las letras pueden estar en mayúsculas o minúsculas.
+``` javascript
+  function cantidadVocales(cadena) {
+    const vocales = cadena.match(/[aeiouáéíóúAEIOUÁÉÍÓÚäëïöüÄËÏÖÜ]/gi);
+    return vocales ? vocales.length : 0;
+  }
+```
+
+## Ejercicio 14
+Modificar el ejercicio anterior para que la función retorne un arreglo de 5 posiciones con la cantidad de letras "a, e, i, o y u".
+``` javascript
+  function cantidadCadaVocal(cadena) {
+    const a = cadena.match(/[aáAÁäÄ]/gi);
+    const e = cadena.match(/[eéEÉëË]/gi);
+    const i = cadena.match(/[iíIÍïÏ]/gi);
+    const o = cadena.match(/[oóOÓöÖ]/gi);
+    const u = cadena.match(/[uúUÚüÜ]/gi);
+    return [
+      a ? a.length : 0,
+      e ? e.length : 0,
+      i ? i.length : 0,
+      o ? o.length : 0,
+      u ? u.length : 0
+    ]
+  }
+```
+
+
+
+
+``` javascript
+
+```
