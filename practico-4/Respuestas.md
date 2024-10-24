@@ -278,3 +278,8 @@ Hacer una función que reciba como parámetro un número entero y retorne true s
     return true;
   }
 ```
+
+## Ejercicio 11
+Utilizando la función “prompt”. Pedir un número entero al usuario ``n`` entre 1 y 10 (controlar que “n” sea un número y en ese rango, de lo contrario lo deberá pedir nuevamente mostrando el error con la función ``alert``). Luego, utilizando la función del ejercicio anterior, encontrar y guardar en un arreglo los ``n`` primeros números primos.
+
+> *Solución en ``ej11.js``*
