@@ -327,8 +327,25 @@ Modificar el ejercicio anterior para que la función retorne un arreglo de 5 pos
       i ? i.length : 0,
       o ? o.length : 0,
       u ? u.length : 0
-    ]
+    ];
   }
+```
+
+## Ejercicio 15
+Hacer una función que reciba una cadena y devuelva ``true`` si es palindrome (es decir se le igual de izquierda a derecha que de derecha a izquierda), ``false`` en otro caso. Ej. "neuquen". 
+Agregue un parámetro más (puede ser booleano) para que sea sensible a mayúsculas y minúsculas o no.
+``` javascript
+  function isPalindrome(cadena, case_sensitive) {
+
+    if (!case_sensitive) {
+      cadena = cadena.toLowerCase();
+    }
+    
+    let cadena_reves = cadena.split('').reverse().join('');
+    
+    return cadena === cadena_reves;
+  }
+
 ```
 
 
