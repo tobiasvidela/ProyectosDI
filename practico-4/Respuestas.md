@@ -1,4 +1,17 @@
 # Practico U4 | JS - Parte 1
+## Ejercicio 1
+Cree una nueva página web con el sencillo ejemplo en javascript:
+``` javascript
+  let s = "Hola Mundo!!!";
+  alert(s)
+```
+Incluir dichas sentencias en un script de todas las siguientes maneras:
+1. En el \<head\> de la página web
+2. En el \<body\> de la página web
+3. En un archivo externo conlocando el vínculo en el \<head\>
+
+> *Solución en ``ej1.js``*
+
 ## Ejercicio 2
 *Cuáles de los siguientes son nombres de identificadores válidos en javascript*:
 - [x] let Nombre1
@@ -283,3 +296,9 @@ Hacer una función que reciba como parámetro un número entero y retorne true s
 Utilizando la función “prompt”. Pedir un número entero al usuario ``n`` entre 1 y 10 (controlar que “n” sea un número y en ese rango, de lo contrario lo deberá pedir nuevamente mostrando el error con la función ``alert``). Luego, utilizando la función del ejercicio anterior, encontrar y guardar en un arreglo los ``n`` primeros números primos.
 
 > *Solución en ``ej11.js``*
+
+## Ejercicio 12
+Hacer una función que reciba una cadena y retorne la misma pero con los caracteres en orden invertido. (ej "Hola" => "aloH"). Pedir al usuario la cadena, y luego utilizando la función, invertirla y mostrarla con ``alert``.
+
+> *Solución en ``ej12.js``*
+
