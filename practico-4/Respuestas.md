@@ -257,3 +257,24 @@ Investigar como es la sintaxis y la forma de uso de las funciones ``alert``, ``p
 > 
 > El estilo visual depende del navegador
 > 
+
+## Ejercicio 10
+Hacer una función que reciba como parámetro un número entero y retorne true si el número es primo y false en otro caso. (Recuerde que un número es primo si solo es divisible por si mismo y por la unidad)
+
+``` javascript
+  function esPrimo(numero) {
+    // Casos especiales
+    if (numero <= 1) return false;  // Los números menores o iguales a 1 no son primos
+    if (numero === 2) return true;  // 2 es el único número primo par
+    if (numero % 2 === 0) return false;  // Los pares mayores a 2 no son primos
+
+    // Solo necesitamos revisar números impares hasta la raíz cuadrada
+    for (let i = 3; i <= Math.sqrt(numero); i += 2) {
+      if (numero % i === 0) {
+        return false;
+      }
+    }
+    
+    return true;
+  }
+```
