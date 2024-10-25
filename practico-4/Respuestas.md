@@ -369,6 +369,16 @@ Haga una función generarPersona() que devuelva un objeto con los siguientes cam
 
 > *Solución en `ej17.js`*
 
+## Ejercicio 18
+Usar el código del ejercicio anterior para generar un arreglo con los datos de n personas.
+El número n será solicitado al usuario.
+
+> *Solución en `ej18.js`*
+
+## Ejercicio 19
+Usando los datos del ejercicio anterior pedir al usuario un número de dni y buscar en el arreglo si existe la persona. Si existe mostrar los datos con un alert. Si no existe mostrar con alert un cartel que diga que no existe una persona con el dni nnnn ingresado.
+
+
 
 
 ``` javascript
