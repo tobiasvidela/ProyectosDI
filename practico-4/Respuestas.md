@@ -378,9 +378,14 @@ El número n será solicitado al usuario.
 ## Ejercicio 19
 Usando los datos del ejercicio anterior pedir al usuario un número de dni y buscar en el arreglo si existe la persona. Si existe mostrar los datos con un alert. Si no existe mostrar con alert un cartel que diga que no existe una persona con el dni nnnn ingresado.
 
+> *Solución en `ej19.js`*
 
-
-
-``` javascript
-
-```
+## Ejercicio 20
+Similar al ejercicio anterior, pero en lugar de mostrar los datos, se deberá eliminar.
+Investigar el uso del método ``array.splice()``.
+El algoritmo deberá:
+- Pedir el dni
+- Buscar la persona
+- Si no existe, mostrar un alert diciendo que no existe
+- Si existe, mostrar el apellido y nombre de la persona en un confirm y pedir la confirmación para eliminar.
+  - En caso afirmativo proceder a eliminar al elemento.
