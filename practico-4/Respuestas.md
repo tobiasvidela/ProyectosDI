@@ -348,6 +348,15 @@ Agregue un parámetro más (puede ser booleano) para que sea sensible a mayúscu
 
 ```
 
+## Ejercicio 16
+Hacer una función que reciba un arreglo de números enteros y devuelva el segundo mayor. (Es decir el que le sigue al mayor, que puede ser el mismo en caso que se repita el número mayor). Para probarlo puedo utilizar el arreglo generado en el ej. N° 6.
+``` javascript
+  function segundoMayor(arr_int) {
+    let arr_ordenado = arr_int.sort((a, b) => b - a);
+    return arr_ordenado[1];
+  }
+```
+
 
 
 
