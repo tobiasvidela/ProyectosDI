@@ -357,6 +357,17 @@ Hacer una función que reciba un arreglo de números enteros y devuelva el segun
   }
 ```
 
+## Ejercicio 17
+Cree un arreglo con unos 20 nombres de pila inventados, otro con 20 apellidos y otro con 20 calles.
+Haga una función generarPersona() que devuelva un objeto con los siguientes campos: dni, apellido, nombre, dirección, edad y email.
+- El dni será un número aleatorio entre 10000000 y 99999999
+- Escoger el apellido generando un número al azar para el arreglo de nombres
+- Idem para el nombre
+- Para el domicilio generar al azar el nombre de la calle y concatenarle un número entero generado al azar entre 1 y 2000
+- La edad será un número al azar generado entre 0 y 100
+- El email será la concatenación del apellido, un “.” (punto) ,el nombre, luego “@” y por último podrá ser gmail.com, yahoo.com o hotmail.com (generarlo al azar con un número del 1 al 3)
+
+> *Solución en `ej17.js`*
 
 
 
