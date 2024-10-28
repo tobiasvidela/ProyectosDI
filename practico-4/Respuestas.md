@@ -94,10 +94,12 @@ Investigue como crear números aleatorios (random) entre el 1 y el 100. Genere u
     return Math.floor(Math.random() * (max - min) + min);
   }
   
+  const longitud = 1000;
   const ar_random = [];
 
-  for (let i = 0; i < 1000; i++) {
-    ar_random.push(getRandomNumber(1, 100));
+  for (let i = 0; i < longitud; i++) {
+    let x = getRandomNumber(1, 100);
+    ar_random.push(x);
   }
   
   console.log(ar_random);

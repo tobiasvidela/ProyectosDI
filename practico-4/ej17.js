@@ -28,7 +28,7 @@ let dominios = [
 
 // Funcionalidades
 function getRandomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min) + min);
+  return Math.round(Math.random() * (max - min) + min);
 }
 
 function generateDNI(min, max) {
@@ -36,15 +36,15 @@ function generateDNI(min, max) {
 }
 
 function chooseApellido() {
-  return apellidos[getRandomNumber(0, apellidos.length)];
+  return apellidos[getRandomNumber(0, apellidos.length - 1)];
 }
 
 function chooseNombre() {
-  return nombres[getRandomNumber(0, nombres.length)];
+  return nombres[getRandomNumber(0, nombres.length - 1)];
 }
 
 function chooseCalle() {
-  return calles[getRandomNumber(0, calles.length)];
+  return calles[getRandomNumber(0, calles.length - 1)];
 }
 
 function generateNroCalle(min, max) {
@@ -61,14 +61,12 @@ function generateEmail(apellido, nombre) {
 }
 
 function generarPersona() {
-  let apellido = chooseApellido();
-  let nombre = chooseNombre();
   return {
-    dni: generateDNI(10000000, 99999999),
-    apellido: apellido,
-    nombre: nombre,
-    direccion: chooseCalle() + ' ' + generateNroCalle(1, 2000),
-    edad: generateEdad(0, 100),
-    email: generateEmail(apellido, nombre)
+    "dni": generateDNI(10000000, 99999999),
+    "apellido": chooseApellido(),
+    "nombre": chooseNombre(),
+    "direccion": chooseCalle() + ' ' + generateNroCalle(1, 2000),
+    "edad": generateEdad(0, 100),
+    "email": generateEmail(this.apellido, this.nombre)
   }
 }
