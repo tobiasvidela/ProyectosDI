@@ -1,5 +1,11 @@
 function invertirCadena(cadena) {
-  return [...cadena].reverse().join('');
+  /* return [...cadena].reverse().join(''); */
+  for (let i = 0, j = cad.length - 1; i <= j; i++, j--) {
+    if (cad[i] !== cad[j]) {
+      return false;
+    }
+  }
+  return true;
 }
 
 function procesarCadena() {
