@@ -37,6 +37,7 @@ header {
   gap: 1em;
   height: 100vh;
   padding: 1em 5em;
+  margin-top: 67px;
 }
 
 header img {
@@ -65,9 +66,19 @@ header p {
 
 /* MENÚ DE NAVEGACIÓN */
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   background-color: var(--Verde);
   padding: 10px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.nav-hidden {
+  transform: translateY(-100%);
 }
 
 nav ul {
@@ -97,8 +108,9 @@ nav ul li a {
   border-radius: 5px;
 }
 
-nav ul li a:hover,
-nav ul li a:focus {
+nav ul li a.active,
+nav ul li a:hover/*,
+nav ul li a:focus*/ {
   background-color: var(--Rojo);
   color: var(--Blanco);
 }
@@ -528,10 +540,11 @@ footer p {
 
 /* VOLVER */
 #volver {
+  display: none;
+  /* display: inline-block; */
   text-decoration: none;
   color: var(--Negro);
   font-size: 18px;
-  display: inline-block;
   border-radius: 5px;
   padding: 10px 15px;
   margin: 10px;
