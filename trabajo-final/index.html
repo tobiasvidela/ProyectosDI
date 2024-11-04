@@ -9,7 +9,12 @@
   <!-- STYLES -->
   <link rel="stylesheet" href="./css/styles.css">
   <!-- FONTAWESOME -->
-  <script src="https://kit.fontawesome.com/5e1bffd3c1.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/5e1bffd3c1.js" crossorigin="anonymous" ></script>
+  <!-- COMPORTAMIENTO -->
+  <script src="js/scrollHandler.js" defer></script>
+  <script src="js/learnMore.js" defer></script>
+  <script src="js/cubeTypes.js" defer></script>
+  <script src="js/contact.js" defer></script>
 </head>
 <body>
   <!-- Menú de Navegación -->
@@ -64,59 +69,67 @@
 
     <div id="tarjetas-rompecabezas">
       <!-- Tarjeta NxN -->
-      <div class="tarjeta">
+      <div class="tarjeta" onclick="priceToggle(this)">
         <img src="./img/cubo-nxn.avif" alt="NxN">
         <h3>NxN</h3>
         <p>Cubos, como el que todos conocemos, pero con más o menos cantidad de capas.</p>
+        <p class="precio">(3x3) ~ USD $5</p>
       </div>
       
       <!-- Tarjeta Megaminx -->
-      <div class="tarjeta">
+      <div class="tarjeta" onclick="priceToggle(this)">
         <img src="./img/cubo-megaminx.avif" alt="Megaminx">
         <h3>Megaminx</h3>
         <p>Un dodecaedro con un patrón similar al cubo de Rubik.</p>
+        <p class="precio">~ USD $12</p>
       </div>
-
+      
       <!-- Tarjeta Pyraminx -->
-      <div class="tarjeta">
+      <div class="tarjeta" onclick="priceToggle(this)">
         <img src="./img/cubo-pyraminx.avif" alt="Pyraminx">
         <h3>Pyraminx</h3>
         <p>Un rompecabezas en forma de pirámide.</p>
+        <p class="precio">~ USD $7.5</p>
       </div>
-
+      
       <!-- Tarjeta Skewb -->
-      <div class="tarjeta">
+      <div class="tarjeta" onclick="priceToggle(this)">
         <img src="./img/cubo-skewb.avif" alt="Skewb">
         <h3>Skewb</h3>
         <p>Un cubo que se mueve por sus esquinas.</p>
+        <p class="precio">~ USD $9</p>
       </div>
-
+      
       <!-- Tarjeta Square-1 -->
-      <div class="tarjeta">
+      <div class="tarjeta" onclick="priceToggle(this)">
         <img src="./img/cubo-square1.avif" alt="Square-1">
         <h3>Square-1</h3>
         <p>Un cubo que cambia de forma mientras se resuelve.</p>
+        <p class="precio">~ USD $10</p>
       </div>
 
       <!-- Tarjeta Mirror Cube -->
-      <div class="tarjeta">
+      <div class="tarjeta" onclick="priceToggle(this)">
         <img src="./img/cubo-mirror.avif" alt="Mirror Cube">
         <h3>Mirror</h3>
         <p>Un cubo que no tiene piezas iguales.</p>
+        <p class="precio">~ USD $6</p>
       </div>
       
       <!-- Tarjeta Gear -->
-      <div class="tarjeta">
+      <div class="tarjeta" onclick="priceToggle(this)">
         <img src="./img/cubo-gear.avif" alt="Gear Cube">
         <h3>Gear</h3>
         <p>Un cubo con engranajes.</p>
+        <p class="precio">~ USD $10</p>
       </div>
       
       <!-- Tarjeta Otros -->
-      <div class="tarjeta">
+      <div class="tarjeta" onclick="priceToggle(this)">
         <img src="./img/cubo-time-machine.avif" alt="Time-Machine Cube">
         <h3>Otros</h3>
         <p>Y muchas más variantes, complejas y extravagantes, simples y sencillas, para todos los gustos.</p>
+        <p class="precio">USD $1 - $100+</p>
       </div>
     </div>
   </section>
@@ -129,22 +142,22 @@
       <p>Los métodos de resolución son técnicas utilizadas para resolver el Cubo de Rubik. Existen varios enfoques, cada uno con sus propias ventajas. Por ejemplo, resolverlo capa por capa, o resolverlo por bloques. Algunos de lo métodos más utilizados son:</p>
       <div class="grid-container">
         <div class="tarjeta">
-          <iframe width="853" height="480" src="https://www.youtube.com/embed/GyY0OxDk5lI" title="Resolver cubo de Rubik 3x3 (Principiantes) | Rápido y Fácil | EL MEJOR TUTORIAL | Español" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="853" height="480" src="https://www.youtube.com/embed/GyY0OxDk5lI" title="Resolver cubo de Rubik 3x3 (Principiantes) | Rápido y Fácil | EL MEJOR TUTORIAL | Español" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
           <h3>Método de Principiantes</h3>
           <p>Un método paso a paso ideal para quienes recién comienzan.</p>
-          <button class="btn">Aprender Más</button>
+          <button class="btn" name="principiante">Aprender Más</button>
         </div>
         <div class="tarjeta">
-          <iframe width="853" height="480" src="https://www.youtube.com/embed/d_hR8pn67wA" title="Resolver cubo de Rubik 3x3 (FRIDRICH COMPLETO) | HD | Tutorial | Español" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="853" height="480" src="https://www.youtube.com/embed/d_hR8pn67wA" title="Resolver cubo de Rubik 3x3 (FRIDRICH COMPLETO) | HD | Tutorial | Español" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
           <h3>Método CFOP (Fridrich)</h3>
           <p>El método más popular entre los speedcubers, dividido en cuatro pasos.</p>
-          <button class="btn">Aprender Más</button>
+          <button class="btn" name="cfop">Aprender Más</button>
         </div>
         <div class="tarjeta">
-          <iframe width="853" height="480" src="https://www.youtube.com/embed/U8RvqWXLDV0" title="Método Roux | El Rival de Fridrich 🔥" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="853" height="480" src="https://www.youtube.com/embed/U8RvqWXLDV0" title="Método Roux | El Rival de Fridrich 🔥" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
           <h3>Método Roux</h3>
           <p>Se enfoca en la construcción de bloques y es muy eficiente.</p>
-          <button class="btn">Aprender Más</button>
+          <button class="btn" name="roux">Aprender Más</button>
         </div>
       </div>
     </div>
@@ -201,9 +214,5 @@
     <p>
       &copy; 2024 SpeedCube VM. Página web desarrollada con la ayuda de Flaticon, Freepik, FontAwesome, PicFLow, ClaudeAI y OpenAI.
   </footer>
-  
-  <!-- VOLVER -->
-  <a id="volver" href="#seccion-home"><i class="fa-solid fa-house"></i></a>
 </body>
-<script src="js/scrollHandler.js"></script>
 </html>

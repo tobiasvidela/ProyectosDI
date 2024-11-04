@@ -109,8 +109,7 @@ nav ul li a {
 }
 
 nav ul li a.active,
-nav ul li a:hover/*,
-nav ul li a:focus*/ {
+nav ul li a:hover {
   background-color: var(--Rojo);
   color: var(--Blanco);
 }
@@ -273,6 +272,20 @@ nav ul li a:focus*/ {
   line-height: 1.4;
 }
 
+#tarjetas-rompecabezas .tarjeta .precio {
+  font-size: 16px;
+  color: var(--Azul);
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+#tarjetas-rompecabezas .tarjeta .precio.visible {
+  opacity: 1;
+  max-height: 20px;
+}
+
 /* SECCIÓN MÉTODOS DE RESOLUCIÓN */
 #seccion-metodos {
   padding: 50px;
@@ -376,20 +389,20 @@ nav ul li a:focus*/ {
   margin: 20px auto;
   max-width: 800px;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra más suave */
-  text-align: center; /* Alinear todo el contenido al centro */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
 }
 
 #timer h2 {
-  font-size: 32px; /* Aumentar el tamaño de la fuente */
+  font-size: 32px;
   margin-bottom: 20px;
   color: var(--Blanco);
-  font-weight: 700; /* Más negrita para destacar */
+  font-weight: 700;
 }
 
 #timer p {
   font-size: 18px;
-  line-height: 1.8; /* Mayor espaciado entre líneas para mejorar la legibilidad */
+  line-height: 1.8;
   margin-bottom: 20px;
 }
 
@@ -397,7 +410,7 @@ nav ul li a:focus*/ {
   color: var(--Azul);
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s, text-decoration 0.3s; /* Transiciones más suaves */
+  transition: color 0.3s, text-decoration 0.3s;
 }
 
 #timer a:hover {
@@ -536,30 +549,6 @@ footer {
 footer p {
   margin: 0;
   font-size: 16px;
-}
-
-/* VOLVER */
-#volver {
-  display: none;
-  /* display: inline-block; */
-  text-decoration: none;
-  color: var(--Negro);
-  font-size: 18px;
-  border-radius: 5px;
-  padding: 10px 15px;
-  margin: 10px;
-  background-color: var(--Blanco); /* Fondo blanco para que resalte */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  position: fixed; /* Hace que el botón esté fijo en la pantalla */
-  bottom: 5px; /* Lo sitúa en la parte inferior de la pantalla */
-  right: 15px; /* Lo alinea a la derecha */
-  z-index: 9999; /* Asegura que esté por encima del contenido */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
-}
-
-#volver:hover {
-  background-color: var(--Rojo); /* Cambia el fondo a rojo al pasar el mouse */
-  color: var(--Blanco); /* Cambia el texto a blanco */
 }
 
 
