@@ -1,7 +1,17 @@
+//            CONSTANTES
+const playlist_aprender = {
+  'principiante':"https://www.youtube.com/watch?v=GyY0OxDk5lI&list=PL1PfvzSCMX0cpBi5-qcKT45f4aZu7sGQO",
+  'cfop':"https://www.youtube.com/watch?v=979lycubm9E&list=PLFbghVhL6Hm6Nax2itiPeVgFmmx3A7UWP",
+  'roux':"https://www.youtube.com/watch?v=ilkF7cxQV2o&list=PLL7KvA5mhPX0qCIiG_kBdVl0yiTSpGENa"
+}
+
+//            VARIABLES
+
 let lastScrollPosition = window.scrollY;
 let navbar = document.querySelector('nav');
 let isScrollingToSection = false; // Variable para controlar si el scroll es por click
 
+//            FUNCIONALIDAD
 // Función para manejar el scroll
 function handleScroll() {
   const currentScrollPosition = window.scrollY;
@@ -78,7 +88,40 @@ function updateActiveSection() {
   }
 }
 
-// Agregamos un debounce para mejorar el rendimiento
+// Función para ir a las playlists de aprender más
+function ir_a_aprender_mas(btn_name) {
+  window.open(playlist_aprender[btn_name],'_blank');
+}
+
+// Manejador de los clicks en los botones
+document.querySelectorAll('#seccion-metodos .btn').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    ir_a_aprender_mas(btn.getAttribute('name'))
+  });
+});
+
+// Función para mostrar u ocultar el precio de los cubos
+function priceToggle(elemento) {
+  const precio = elemento.querySelector('.precio');
+
+  if (precio.classList.contains('visible')) {
+    precio.classList.remove('visible');
+  } else {
+    precio.classList.add('visible');
+  }
+}
+
+// Manejador del comportamiento del sumbit del formulario
+document.getElementById('form-contacto').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const nombre = document.getElementById('nombre').value;
+  
+  alert(`¡Mensaje enviado, ${nombre}! \nPronto te contactaremos... en cuanto sepamos dónde vives 🕵️‍♂️💻`);
+});
+
+
+//            LLAMADAS
+
 let ticking = false;
 window.addEventListener('scroll', function() {
   if (!ticking) {
