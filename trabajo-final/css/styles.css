@@ -379,7 +379,7 @@ nav ul li a:hover {
 #seccion-timer {
   padding: 50px;
   margin: 100px auto;
-  min-height: 100vh;
+  min-height: 70vh;
 }
 
 #timer {
