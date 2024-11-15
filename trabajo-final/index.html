@@ -190,12 +190,66 @@
           <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
         </div>
 
+        <!-- Campos para el rango de fechas -->
+        <h3>Selecciona el rango de fechas para reunirte conmigo</h3>
+        <p>Esto con el objetivo de agendar de manera flexible la reunión.</p>
+        <div class="form-group">
+          <label for="fecha_inicio">Fecha de Inicio</label>
+          <input type="date" id="fecha_inicio" name="fecha_inicio" required>
+        </div>
+
+        <div class="form-group">
+          <label for="fecha_fin">Fecha de Fin</label>
+          <input type="date" id="fecha_fin" name="fecha_fin" required>
+        </div>
+        
+        <!-- Campo para elegir tipos de cubos -->
+        <h3>Selecciona los tipos de cubos de tu interés</h3>
+        <div class="form-group">
+          <div class="checkbox-container">            
+            <input type="checkbox" id="cubo_3x3" name="tipos_cubos[]" value="3x3">
+            <label for="cubo_3x3">3x3</label>
+      
+            <input type="checkbox" id="cubo_nxn" name="tipos_cubos[]" value="NxN">
+            <label for="cubo_nxn">NxN</label>
+      
+            <input type="checkbox" id="megaminx" name="tipos_cubos[]" value="Megaminx">
+            <label for="megaminx">Megaminx</label>
+      
+            <input type="checkbox" id="piraminx" name="tipos_cubos[]" value="Piraminx">
+            <label for="piraminx">Piraminx</label>
+      
+            <input type="checkbox" id="mirror" name="tipos_cubos[]" value="Mirror">
+            <label for="mirror">Mirror</label>
+      
+            <input type="checkbox" id="square1" name="tipos_cubos[]" value="Square-1">
+            <label for="square1">Square-1</label>
+      
+            <input type="checkbox" id="skewb" name="tipos_cubos[]" value="Skewb">
+            <label for="skewb">Skewb</label>
+      
+            <input type="checkbox" id="time_machine" name="tipos_cubos[]" value="Time-Machine">
+            <label for="time_machine">Time-Machine</label>
+          </div>
+        </div>
+
+        <!-- Campo para elegir el nivel -->
+        <h3>Nivel de aprendizaje</h3>
+        <div class="form-group">
+          <label for="nivel">Elige el nivel con el que deseas aprender</label>
+          <select name="nivel" id="nivel" multiple>
+            <!-- <option value="default" selected>Elige un nivel con el que te sienteas cómodo</option> -->
+            <option value="principiante">Principiante</option>
+            <option value="intermedio">Intermedio</option>
+            <option value="avanzado">Avanzado</option>
+          </select>
+        </div>
+
         <!-- Campo para el Mensaje -->
         <div class="form-group">
           <label for="mensaje">Mensaje</label>
           <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
         </div>
-
         <!-- Botón de Envío -->
         <button type="submit" class="btn"><i class="fa-solid fa-envelope"></i> Agendar reunión</button>
       </form>
