@@ -194,6 +194,30 @@
             required>
         </div>
 
+        <!-- Campo para la Edad -->
+        <div class="form-group">
+          <label for="edad">Edad</label>
+          <input 
+            type="number" 
+            id="edad" 
+            name="edad" 
+            placeholder="Tu edad" 
+            aria-label="Edad en años"
+            required>
+        </div>
+
+        <!-- Campo para el Teléfono -->
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input 
+            type="number" 
+            id="telefono" 
+            name="telefono" 
+            placeholder="2657292707" 
+            aria-label="Teléfono"
+            required>
+        </div>
+
         <!-- Campo para el Email -->
         <div class="form-group">
           <label for="email">Correo Electrónico</label>
@@ -260,8 +284,9 @@
         <!-- Campo para elegir el nivel -->
         <h3>Nivel de aprendizaje</h3>
         <div class="form-group">
-          <label for="nivel">Elige tu nivel</label>
+          <label for="nivel">Selecciona al menos un nivel que deseas alcanzar:</label>
           <select name="nivel" id="nivel" aria-label="Nivel de aprendizaje" multiple>
+            <option value="novato">Novato</option>
             <option value="principiante">Principiante</option>
             <option value="intermedio">Intermedio</option>
             <option value="avanzado">Avanzado</option>

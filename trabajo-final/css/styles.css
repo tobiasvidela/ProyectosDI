@@ -600,6 +600,7 @@ nav ul li a:hover {
 }
 
 /* Estilo general del select */
+
 #nivel {
   width: 100%;
   padding: 12px;
@@ -609,7 +610,7 @@ nav ul li a:hover {
   background-color: var(--Blanco);
   color: var(--Negro);
   appearance: none;
-  height: 138px;
+  min-height: 45px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -636,7 +637,6 @@ nav ul li a:hover {
 
 label[for="nivel"] {
   font-size: 16px;
-  font-weight: bold;
   margin-bottom: 8px;
   display: block;
 }
