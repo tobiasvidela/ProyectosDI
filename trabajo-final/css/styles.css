@@ -429,12 +429,12 @@ nav ul li a:hover {
   font-weight: bold;
   transition: background-color 0.3s, color 0.3s;
   display: inline-block;
-  margin-top: 20px; /* Espaciado entre el párrafo y el botón */
+  margin-top: 20px;
 }
 
 #timer .btn:hover {
-  background-color: var(--Blanco); /* Cambia el fondo a rojo al hacer hover */
-  color: var(--Azul); /* Mantiene el texto blanco */
+  background-color: var(--Blanco);
+  color: var(--Azul);
 }
 
 /* SECCIÓN CONTACTO */
@@ -609,6 +609,8 @@ nav ul li a:hover {
   background-color: var(--Blanco);
   color: var(--Negro);
   appearance: none;
+  height: 138px;
+  overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   cursor: pointer;
@@ -622,7 +624,7 @@ nav ul li a:hover {
 }
 
 #nivel:hover {
-  border-color: var(--Azul); /* Azul más oscuro */
+  border-color: var(--Azul);
 }
 
 #nivel option {
