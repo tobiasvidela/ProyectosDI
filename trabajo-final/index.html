@@ -204,6 +204,7 @@
             placeholder="Tu edad" 
             aria-label="Edad en años"
             required>
+          <small class="edad-error" id="edad-error" aria-live="polite"></small>
         </div>
 
         <!-- Campo para el Teléfono -->
@@ -280,7 +281,7 @@
           <input type="checkbox" id="otros_cubos" name="tipos_cubos[]" value="Otros">
           <label for="otros_cubos">Otras variantes</label>
 
-          <input type="checkbox" id="seleccionar_todo" name="tipos_cubos[]" value="todos">
+          <input type="checkbox" id="seleccionar_todo" name="todos" value="todos">
           <label for="seleccionar_todo">Todos</label>
         </div>
 
@@ -289,10 +290,10 @@
         <div class="form-group">
           <label for="nivel">Selecciona al menos un nivel que deseas alcanzar:</label>
           <select name="nivel" id="nivel" aria-label="Nivel de aprendizaje" multiple required>
-            <option value="novato">Novato</option>
-            <option value="principiante">Principiante</option>
-            <option value="intermedio">Intermedio</option>
-            <option value="avanzado">Avanzado</option>
+            <option value="Novato">Novato</option>
+            <option value="Principiante">Principiante</option>
+            <option value="Intermedio">Intermedio</option>
+            <option value="Avanzado">Avanzado</option>
           </select>
         </div>
 
@@ -306,6 +307,22 @@
             placeholder="Escribe tu mensaje aquí..." 
             aria-label="Mensaje para agendar la reunión"
             required></textarea>
+        </div>
+
+        <!-- Campo para calcular -->
+        <h3>¿Hace cuánto tiempo conocés el cubo de Rubik?</h3>
+        <div class="form-group">
+          <label for="tiempo_cubo">Coloca el tiempo en años:</label>
+          <input
+            type="number"
+            id="tiempo_cubo" 
+            name="tiempo_cubo" 
+            placeholder="Por ejemplo, 3" 
+            aria-label="Años desde que conocés el cubo de Rubik"
+            min="0"
+            max="99"
+            required></input>
+            <small class="pregunta-error" id="pregunta-error" aria-live="polite"></small>
         </div>
 
         <!-- Botón de Envío -->
