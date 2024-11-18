@@ -22,11 +22,11 @@ const meses = [
   "Diciembre",
 ]
 
-const nombre = document.querySelector("#nombre").value;
 const fechaInicioInput = document.querySelector("#fecha_inicio");
 const fechaFinInput = document.querySelector("#fecha_fin");
 const checkboxesCubos = document.querySelectorAll('input[name="tipos_cubos[]"]');
 const seleccionarTodosLosCubos = document.querySelector('#seleccionar_todo');
+const camposValidar = document.querySelectorAll('input[type="text"], input[type="number"], input[type="email"], textarea');
 
 /*    FUNCIONALIDAD     */
 //  FECHAS
@@ -37,22 +37,18 @@ function establecerFechaMinima() {
   fechaFinInput.min = hoy;
 }
 
-function validarRangoFechas() {
-  const fechaInicio = new Date(fechaInicioInput.value);
-  const fechaFin = new Date(fechaFinInput.value);
-
-  // Validar que fecha fin sea mayor o igual a fecha inicio
-  if (fechaInicio > fechaFin) {
-    fechaFinInput.value = fechaInicioInput.value;
+function actualizarFechaInicio() {
+  if (!fechaFinInput || !fechaInicioInput.value || new Date(fechaInicioInput.value) > new Date(fechaFinInput.value)) {
+    fechaInicioInput.value = fechaFinInput.value;
   }
 }
 
 function actualizarFechaFin() {
-  // Actualizar fecha fin cuando cambia fecha inicio
-  if (!fechaFinInput.value || new Date(fechaFinInput.value) < new Date(fechaInicioInput.value)) {
+  if (!fechaFinInput.value || !fechaInicioInput.value || new Date(fechaFinInput.value) < new Date(fechaInicioInput.value)) {
     fechaFinInput.value = fechaInicioInput.value;
   }
 }
+
 //  CHECKBOXES
 function validarSeleccionCubos() {
   // Contar cuántos checkboxes están seleccionados
@@ -84,10 +80,59 @@ function mostrarErrorCheckbox() {
   return true;
 }
 
+// VALIDAR CAMPOS
+function validarCampo(campo) {
+  // Eliminar espacios al inicio y final
+  const valorTrimmed = campo.value.trim();
+
+  if (valorTrimmed === '') {
+    // Crear mensaje de error si no existe
+    let errorMensaje = campo.nextElementSibling;
+    if (!errorMensaje || !errorMensaje.classList.contains('error-mensaje')) {
+      errorMensaje = document.createElement('p');
+      errorMensaje.classList.add('error-mensaje');
+      errorMensaje.style.color = 'red';
+      campo.parentNode.insertBefore(errorMensaje, campo.nextSibling);
+    }
+
+    // Establecer mensaje de error específico según el tipo de campo
+    switch(campo.id) {
+      case 'nombre':
+        errorMensaje.textContent = 'Por favor, ingresa tu nombre';
+        break;
+      case 'edad':
+        errorMensaje.textContent = 'Por favor, ingresa tu edad';
+        break;
+      case 'telefono':
+        errorMensaje.textContent = 'Por favor, ingresa tu número de teléfono';
+        break;
+      case 'email':
+        errorMensaje.textContent = 'Por favor, ingresa tu correo electrónico';
+        break;
+      case 'mensaje':
+        errorMensaje.textContent = 'Por favor, escribe un mensaje';
+        break;
+      default:
+        errorMensaje.textContent = 'Este campo no puede estar vacío';
+    }
+
+    // Establecer foco en el campo
+    campo.focus();
+    return false;
+  } else {
+    // Eliminar mensaje de error si existe
+    const errorMensaje = campo.nextElementSibling;
+    if (errorMensaje && errorMensaje.classList.contains('error-mensaje')) {
+      errorMensaje.remove();
+    }
+    return true;
+  }
+}
+
 /* EVENTOS */
 // FECHAS
 fechaInicioInput.addEventListener('change', actualizarFechaFin);
-fechaFinInput.addEventListener('change', validarRangoFechas);
+fechaFinInput.addEventListener('change', actualizarFechaInicio);
 
 // CHECKBOXES
 seleccionarTodosLosCubos.addEventListener('change', function() {
@@ -105,6 +150,13 @@ checkboxesCubos.forEach(checkbox => {
 
 checkboxesCubos.forEach(checkbox => {
   checkbox.addEventListener('change', mostrarErrorCheckbox);
+});
+
+// CAMPOS DE TEXTO Y NÚMERO
+camposValidar.forEach(campo => {
+  campo.addEventListener('blur', function() {
+    validarCampo(this);
+  });
 });
 
 // Mostrar mensaje al ususario cuando haga sumbit
