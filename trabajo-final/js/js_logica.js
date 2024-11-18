@@ -22,22 +22,97 @@ const meses = [
   "Diciembre",
 ]
 
-document.querySelector("#form-contacto").addEventListener("submit", function (e) {
-  e.preventDefault();
+const nombre = document.querySelector("#nombre").value;
+const fechaInicioInput = document.querySelector("#fecha_inicio");
+const fechaFinInput = document.querySelector("#fecha_fin");
+const checkboxesCubos = document.querySelectorAll('input[name="tipos_cubos[]"]');
+const seleccionarTodosLosCubos = document.querySelector('#seleccionar_todo');
 
-  const nombre = document.querySelector("#nombre").value;
-  const fechaInicio = document.querySelector("#fecha_inicio").value;
-  const fechaFin = document.querySelector("#fecha_fin").value;
+/*    FUNCIONALIDAD     */
+//  FECHAS
+function establecerFechaMinima() {
+  // Obtener fecha estándar y eliminar la hora
+  const hoy = new Date().toISOString().split('T')[0];
+  fechaInicioInput.min = hoy;
+  fechaFinInput.min = hoy;
+}
 
-  let fechaInicioDate = new Date(fechaInicio);
-  let fechaFinDate = new Date(fechaFin);
+function validarRangoFechas() {
+  const fechaInicio = new Date(fechaInicioInput.value);
+  const fechaFin = new Date(fechaFinInput.value);
 
-  if (fechaInicioDate > fechaFinDate) {
-    alert("La fecha de inicio debe ser antes que la fecha de fin.");
-    return;
+  // Validar que fecha fin sea mayor o igual a fecha inicio
+  if (fechaInicio > fechaFin) {
+    fechaFinInput.value = fechaInicioInput.value;
+  }
+}
+
+function actualizarFechaFin() {
+  // Actualizar fecha fin cuando cambia fecha inicio
+  if (!fechaFinInput.value || new Date(fechaFinInput.value) < new Date(fechaInicioInput.value)) {
+    fechaFinInput.value = fechaInicioInput.value;
+  }
+}
+//  CHECKBOXES
+function validarSeleccionCubos() {
+  // Contar cuántos checkboxes están seleccionados
+  const checkboxesSeleccionados = 
+    Array.from(checkboxesCubos).filter(checkbox => checkbox.checked).length;
+
+  return checkboxesSeleccionados >= 2;
+}
+
+function mostrarErrorCheckbox() {
+  const checkboxContainer = document.querySelector('.checkbox-container');
+  
+  // Eliminar mensaje de error previo si existe
+  const errorExistente = checkboxContainer.querySelector('.error-mensaje');
+  if (errorExistente) {
+    errorExistente.remove();
   }
 
-  alert(
-    `¡Gracias, ${nombre}! Hemos recibido tu solicitud para agendar una reunión entre el ${dias_semana[fechaInicioDate.getDay()]} ${fechaInicioDate.getDate()+1} de ${meses[fechaInicioDate.getMonth()]} y el ${dias_semana[fechaFinDate.getDay()]} ${fechaFinDate.getDate()+1} de ${meses[fechaFinDate.getMonth()]}.`
-  );
+  // Si no hay suficientes checkboxes seleccionados, mostrar mensaje
+  if (!validarSeleccionCubos()) {
+    const errorMensaje = document.createElement('p');
+    errorMensaje.textContent = 'Debes seleccionar al menos 2 tipos de cubos';
+    errorMensaje.classList.add('error-mensaje');
+    errorMensaje.style.color = 'red';
+    checkboxContainer.appendChild(errorMensaje);
+    return false;
+  }
+  
+  return true;
+}
+
+/* EVENTOS */
+// FECHAS
+fechaInicioInput.addEventListener('change', actualizarFechaFin);
+fechaFinInput.addEventListener('change', validarRangoFechas);
+
+// CHECKBOXES
+seleccionarTodosLosCubos.addEventListener('change', function() {
+  checkboxesCubos.forEach(checkbox => {
+    checkbox.checked = this.checked;
+  });
 });
+
+checkboxesCubos.forEach(checkbox => {
+  checkbox.addEventListener('change', function() {
+    seleccionarTodosLosCubos.checked = 
+      Array.from(checkboxesCubos).every(cb => cb.checked);
+  });
+});
+
+checkboxesCubos.forEach(checkbox => {
+  checkbox.addEventListener('change', mostrarErrorCheckbox);
+});
+
+// Mostrar mensaje al ususario cuando haga sumbit
+document.querySelector("#form-contacto").addEventListener("submit", function (e) {
+  e.preventDefault();
+  
+  // Mensaje al usuario
+});
+
+/* INICIALIZACIONES */
+establecerFechaMinima();
